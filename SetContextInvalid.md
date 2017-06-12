@@ -4,6 +4,14 @@
 原因是
 
 ```
-(Apparently, when you are calling this code, before you call UIGraphicsBeginImageContext(), 
-there is no current context. Therefore UIGraphicsGetCurrentContext() returns nil.)
+  (Apparently, when you are calling this code, before you call UIGraphicsBeginImageContext(), 
+  there is no current context. Therefore UIGraphicsGetCurrentContext() returns nil.)
 ```
+
+正确调用顺序
+```
+  UIGraphicsBeginImageContext( rect.size )
+
+  let context = UIGraphicsGetCurrentContext()
+```
+这样才可以获取争取的 context

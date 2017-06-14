@@ -135,3 +135,41 @@ Tobias Hagemann
 - https://tobiha.de/
 - tobias.hagemann@gmail.com
 - https://twitter.com/tobihagemann
+
+## 另一种描边的方法
+
+```
+/**
+ 描边的 Label
+ */
+@interface DrawTextLabel : UILabel
+
+@end
+
+@implementation DrawTextLabel
+
+- (void)drawTextInRect:(CGRect)rect {
+    
+    CGSize shadowOffset = self.shadowOffset;
+    UIColor *textColor = self.textColor;
+    
+    CGContextRef c = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(c, 0.8);
+    CGContextSetLineJoin(c, kCGLineJoinRound);
+    
+    CGContextSetTextDrawingMode(c, kCGTextStroke);
+    self.textColor = WCBlack;
+    [super drawTextInRect:rect];
+    
+    CGContextSetTextDrawingMode(c, kCGTextFill);
+    self.textColor = textColor;
+    self.shadowOffset = CGSizeMake(0, 0);
+    [super drawTextInRect:rect];
+    
+    self.shadowOffset = shadowOffset;
+}
+
+@end
+```
+
+但是会提示很多警告，效果能设置成功

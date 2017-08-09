@@ -29,7 +29,6 @@ int main(int argc, const char * argv[]) {
         
         [p performSelector:@selector(eat)];
         [p performSelector:@selector(run:) withObject:@100];
-        
     }
     return 0;
 }

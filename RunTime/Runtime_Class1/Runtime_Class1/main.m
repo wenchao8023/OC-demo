@@ -23,6 +23,7 @@ int main(int argc, const char * argv[]) {
 //        RTClass *testCls = [[RTClass alloc] init];
         
 
+        NSLog(@"\n\n------1. 获取类名 class_getName");
         /** 1. 获取类名 class_getName
          * 函数原型
          *  OBJC_EXPORT const char *class_getName(Class cls)
@@ -34,7 +35,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"The class is : %@", className);
         
         
-        
+        NSLog(@"\n\n------2. 获取父类名 class_getSuperclass");
         /** 2. 获取父类名 class_getSuperclass
          * 函数原型
          *  OBJC_EXPORT Class class_getSuperclass(Class cls) 
@@ -45,12 +46,14 @@ int main(int argc, const char * argv[]) {
         NSLog(@"The super class is : %@", [NSString stringWithUTF8String:class_getName(superClass)]);
         
         
+        NSLog(@"\n\n------");
         /** 3. class_setSuperclass 废弃
          * 函数原型
          *  OBJC_EXPORT Class class_setSuperclass(Class cls, Class newSuper)
          */
 
         
+        NSLog(@"\n\n------");
         /** 4. 判断是否是元类 class_isMetaClass
          * 函数原型
          *  OBJC_EXPORT BOOL class_isMetaClass(Class cls)
@@ -60,6 +63,7 @@ int main(int argc, const char * argv[]) {
         //了解元类之后再做解释
         
         
+        NSLog(@"\n\n------5. 获取类的字节大小 class_getInstanceSize");
         /** 5. 获取类的字节大小 class_getInstanceSize
          * 函数原型
          *  OBJC_EXPORT size_t class_getInstanceSize(Class cls)
@@ -74,6 +78,7 @@ int main(int argc, const char * argv[]) {
               );
         
         
+        NSLog(@"\n\n------");
         /** 6. 获取实例的属性 class_getInstanceVariable
          * 函数原型
          *  OBJC_EXPORT Ivar class_getInstanceVariable(Class cls, const char *name)
@@ -83,6 +88,7 @@ int main(int argc, const char * argv[]) {
          */
         
         
+        NSLog(@"\n\n------");
         /** 7. 获取类的属性 class_getClassVariable
          * 函数原型
          *  OBJC_EXPORT Ivar class_getClassVariable(Class cls, const char *name)
@@ -92,6 +98,7 @@ int main(int argc, const char * argv[]) {
          */
         
         
+        NSLog(@"\n\n------8. 获取成员变量数组 class_copyIvarList");
         /** 8. 获取成员变量数组 class_copyIvarList
          * 函数原型
          *  OBJC_EXPORT Ivar *class_copyIvarList(Class cls, unsigned int *outCount)
@@ -117,6 +124,7 @@ int main(int argc, const char * argv[]) {
         }
         
         
+        NSLog(@"\n\n------9. 获取成员属性数组 class_copyPropertyList");
         /** 9. 获取成员属性数组 class_copyPropertyList
          * 函数原型
          *  OBJC_EXPORT objc_property_t *class_copyPropertyList(Class cls, unsigned int *outCount)
@@ -140,6 +148,8 @@ int main(int argc, const char * argv[]) {
             NSLog(@"propertyStr : %d -> %@", i, propertyStr);
         }
         
+        
+        NSLog(@"\n\n------10. 获取方法数组 class_copyMethodList");
         /** 10. 获取方法数组 class_copyMethodList
          * 函数原型
          *  OBJC_EXPORT Method *class_copyMethodList(Class cls, unsigned int *outCount)

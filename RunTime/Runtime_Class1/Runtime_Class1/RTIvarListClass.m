@@ -20,11 +20,6 @@
     
 }
 
-- (void)testFunction2:(int)num
-{
-    
-}
-
 - (void)testFunction3:(float)f
 {
     

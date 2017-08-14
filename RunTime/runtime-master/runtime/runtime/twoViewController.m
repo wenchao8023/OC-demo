@@ -40,7 +40,7 @@
     class_addMethod([self.person class], @selector(guess), (IMP)guessAnswer, "v@:");
     if ([self.person respondsToSelector:@selector(guess)]) {
         //Method method = class_getInstanceMethod([self.xiaoMing class], @selector(guess));
-        [self.person performSelector:@selector(guess)];
+            [self.person performSelector:@selector(guess)];
         
     } else{
         NSLog(@"Sorry,I don't know");

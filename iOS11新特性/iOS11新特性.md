@@ -119,7 +119,7 @@ Xcode 9 中的索引系统也使用了新的引擎，据称在大型项目中搜
 	通过上图也可以看到， `searchBar` 默认是隐藏的，当下拉的时候才会显示出来，再上拉又会隐藏。
 	当设置为 `false` 时， `searchBar` 会一直显示，当 `scrollview` 下拉时， `searchBar` 会随着 `scrollview` 往下走，上拉时，则固定在顶部不动。
 	
-	![searchBar效果图](https://github.com/wenchao8023/OC-demo/blob/master/searchController.gif)
+	![searchBar效果图](https://github.com/wenchao8023/OC-demo/blob/master/iOS11新特性/searchController.gif)
 	
 	当scrollview下拉时，navigation bar的高度是一直增大的（通过在scrollViewDidScroll代理里打印navigation bar的frame就会发现），也就是系统实际上是通过增大navigation bar的height，来让search bar紧随着scrollview的content的。
 	查看层级关系，会发现，searchBar并不是navigation bar的subview。

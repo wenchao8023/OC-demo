@@ -194,7 +194,7 @@ optional public func tableView(_ tableView: UITableView, trailingSwipeActionsCon
         return UISwipeActionsConfiguration(actions: [action])
     }
 
-![左滑效果图](/https://github.com/wenchao8023/OC-demo/blob/master/iOS11新特性/cell左滑效果图.gif)
+![左滑效果图](https://github.com/wenchao8023/OC-demo/blob/master/iOS11%E6%96%B0%E7%89%B9%E6%80%A7/cell%E5%B7%A6%E6%BB%91%E6%95%88%E6%9E%9C%E5%9B%BE.gif)
 
 方法解读：
 

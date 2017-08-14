@@ -45,7 +45,7 @@ Xcode 9 中的索引系统也使用了新的引擎，据称在大型项目中搜
 #### Named Color
 
 现在你可以在 xcassets 里添加颜色，然后在代码或者 XIB 中引用这个颜色了。
-![自定义颜色](/Users/guowenchao/Desktop/github_Top/OC-demo/iOS11新特性/named-colors.png)
+![自定义颜色](https://github.com/wenchao8023/OC-demo/blob/master/iOS11新特性/named-colors.png)
 这个在 xcassets 中定义的颜色，可以直接在代码和 XIB 中引用这个颜色，以前在代码中定义的颜色只能在代码中引用，并不能直接在 XIB 中使用，每次用 XIB 创建 UI 的时候，都需要先在定义颜色的地方找到对应的颜色才能在 XIB 中获取这个颜色。现在只要定义在Named Color中的颜色，在代码和 XIB 中都可以引用，这个变化对于开发者来说是很实际的功能。
 
 ### 小的变更
@@ -110,7 +110,7 @@ Xcode 9 中的索引系统也使用了新的引擎，据称在大型项目中搜
 	
 		navigationController?.navigationBar.prefersLargeTitles = true
 		
-	![prefersLargeTitles效果图](/Users/guowenchao/Desktop/github_Top/OC-demo/iOS11新特性/navigationBar.gif)
+	![prefersLargeTitles效果图](https://github.com/wenchao8023/OC-demo/blob/master/iOS11新特性/navigationBar.gif)
 	
 * 新增 `hidesSearchBarWhenScrolling：Bool` 属性
 
@@ -119,12 +119,12 @@ Xcode 9 中的索引系统也使用了新的引擎，据称在大型项目中搜
 	通过上图也可以看到， `searchBar` 默认是隐藏的，当下拉的时候才会显示出来，再上拉又会隐藏。
 	当设置为 `false` 时， `searchBar` 会一直显示，当 `scrollview` 下拉时， `searchBar` 会随着 `scrollview` 往下走，上拉时，则固定在顶部不动。
 	
-	![searchBar效果图](/Users/guowenchao/Desktop/github_Top/OC-demo/iOS11新特性/searchController.gif)
+	![searchBar效果图](https://github.com/wenchao8023/OC-demo/blob/master/searchController.gif)
 	
 	当scrollview下拉时，navigation bar的高度是一直增大的（通过在scrollViewDidScroll代理里打印navigation bar的frame就会发现），也就是系统实际上是通过增大navigation bar的height，来让search bar紧随着scrollview的content的。
 	查看层级关系，会发现，searchBar并不是navigation bar的subview。
 
-	![层级图](/Users/guowenchao/Desktop/github_Top/OC-demo/iOS11新特性/层级图.png)
+	![层级图](https://github.com/wenchao8023/OC-demo/blob/master//iOS11新特性/层级图.png)
 	
 #### UITableView
 
@@ -194,7 +194,7 @@ optional public func tableView(_ tableView: UITableView, trailingSwipeActionsCon
         return UISwipeActionsConfiguration(actions: [action])
     }
 
-![左滑效果图](/Users/guowenchao/Desktop/github_Top/OC-demo/iOS11新特性/cell左滑效果图.gif)
+![左滑效果图](/https://github.com/wenchao8023/OC-demo/blob/master/iOS11新特性/cell左滑效果图.gif)
 
 方法解读：
 
